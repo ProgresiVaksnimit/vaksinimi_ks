@@ -15,6 +15,7 @@ Data: 15/08/2021 23:23:58
 - Edit [twitter.cfg](./twitter.cfg) and put in your Twitter Consumer and Access tokens/keys
 - Change `DRY_RUN = True` in [tw_bot.py](./tw_bot.py) to `False` when you are done testing
 - Install needed libraries using requirements file
+- Note: If you don't want to use SAM option, just remove `lambda_handler` function and call `main` function directly
 
 ```
 # Create venv
