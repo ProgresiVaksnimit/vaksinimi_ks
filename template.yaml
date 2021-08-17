@@ -17,5 +17,5 @@ Resources:
         CWSchedule:
           Type: Schedule
           Properties:
-            Schedule: 'cron(0 8,12,16,20 * ? MON-SAT *)'
+            Schedule: 'cron(0 8,12,16,20 ? * MON-SAT *)'
             Name: twitter_bot_scheduler
