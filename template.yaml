@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Twitter Bot - Covid-19 Vaccination Progress in Republic of Kosovo
+Globals:
+  Function:
+    Timeout: 10
+
+Resources:
+  TwitterBot:
+    Type: AWS::Serverless::Function 
+    Properties:
+      CodeUri: ./
+      Handler: tw_bot.lambda_handler
+      Runtime: python3.7
+      Events:
+        CWSchedule:
+          Type: Schedule
+          Properties:
+            Schedule: 'cron(0 8,12,16,20 * ? MON-SAT *)'
+            Name: twitter_bot_scheduler
