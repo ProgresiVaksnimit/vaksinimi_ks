@@ -96,7 +96,7 @@ def generateTweet():
     """
     f_dose = generateProgressBar(float((FIRST_DOSE + SECOND_DOSE) / POPULATION))
     s_dose = generateProgressBar(float(SECOND_DOSE / POPULATION))
-    tweet_message = f'{f_dose} - të vaksinuar me dozën e parë\n{s_dose} - të vaksinuar me dy doza\nData: {datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")}'
+    tweet_message = f'{f_dose} - të vaksinuar me dozën e parë\n{s_dose} - të vaksinuar me dy doza\nData: {(datetime.datetime.now() + datetime.timedelta(hours=2)).strftime("%d/%m/%Y %H:%M:%S")}'
     return tweet_message
 
 
